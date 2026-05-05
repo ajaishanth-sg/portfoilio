@@ -1,6 +1,6 @@
 # Ajaishanth S G - Full Stack Developer Portfolio
 
-This project is a modern, interactive portfolio showcasing projects, skills, and experience.
+Personal portfolio website showcasing my projects, skills, and experience as a developer.
 
 ## Technologies Used
 
@@ -26,3 +26,4 @@ This project is a modern, interactive portfolio showcasing projects, skills, and
    ```sh
    npm run build
    ```
+
