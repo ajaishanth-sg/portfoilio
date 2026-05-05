@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajaishanth Portfolio Design System - Modern Glassmorphism Theme */
+
+@layer base {
+  :root {
+    /* Background System */
+    --background: 240 10% 6%;
+    --background-secondary: 240 8% 8%;
+    --background-glass: 240 10% 15%;
+    --foreground: 0 0% 98%;
+
+    /* Card System with Glassmorphism */
+    --card: 240 10% 10%;
+    --card-glass: 240 15% 15%;
+    --card-foreground: 0 0% 95%;
+    --card-border: 240 15% 20%;
+
+    /* Primary Brand Colors - Vibrant Tech Theme */
+    --primary: 250 100% 65%;
+    --primary-glow: 250 100% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary Accent Colors */
+    --secondary: 280 100% 70%;
+    --secondary-glow: 280 100% 80%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Tertiary Colors */
+    --tertiary: 200 100% 60%;
+    --tertiary-glow: 200 100% 70%;
+
+    /* Text Colors */
+    --muted: 240 5% 25%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 250 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 15% 18%;
+    --input: 240 15% 18%;
+    --ring: 250 100% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--secondary-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--background-secondary)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card-glass) / 0.5), hsl(var(--card-glass) / 0.2));
+
+    /* Shadows */
+    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px hsl(var(--background) / 0.5);
+    --shadow-elegant: 0 20px 40px -10px hsl(var(--primary) / 0.2);
+
+    /* Border Radius */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass Card Effects */
+  .glass-card {
+    background: hsl(var(--card-glass) / 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--card-border) / 0.2);
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-intense {
+    background: hsl(var(--card-glass) / 0.2);
+    backdrop-filter: blur(30px);
+    border: 1px solid hsl(var(--card-border) / 0.3);
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-hover {
+    transition: var(--transition-smooth);
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Text Effects */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  /* Animated Underlines */
+  .animated-underline {
+    position: relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+    border-radius: 2px;
+  }
+
+  .animated-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delay {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .float-delayed-more {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-15px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-8px) rotate(-1deg);
+    }
+  }
+
+  /* Enhanced Pulse Glow Animation */
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+      transform: scale(1.05);
+    }
+  }
+
+  /* Gradient Border Animation */
+  .gradient-border {
+    position: relative;
+    background: var(--gradient-card);
+    border-radius: var(--radius-lg);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    animation: gradient-rotate 3s linear infinite;
+  }
+
+  @keyframes gradient-rotate {
+    0% {
+      background: linear-gradient(0deg, hsl(var(--primary)), hsl(var(--secondary)));
+    }
+    25% {
+      background: linear-gradient(90deg, hsl(var(--secondary)), hsl(var(--tertiary)));
+    }
+    50% {
+      background: linear-gradient(180deg, hsl(var(--tertiary)), hsl(var(--primary)));
+    }
+    75% {
+      background: linear-gradient(270deg, hsl(var(--primary)), hsl(var(--secondary)));
+    }
+    100% {
+      background: linear-gradient(360deg, hsl(var(--secondary)), hsl(var(--tertiary)));
+    }
+  }
+
+  /* Morphing Background */
+  .morphing-bg {
+    background: linear-gradient(-45deg, 
+      hsl(var(--primary) / 0.1), 
+      hsl(var(--secondary) / 0.1), 
+      hsl(var(--tertiary) / 0.1), 
+      hsl(var(--primary-glow) / 0.1)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Particle Animation */
+  .particle {
+    position: absolute;
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-float 10s linear infinite;
+  }
+
+  .particle:nth-child(odd) {
+    background: hsl(var(--secondary) / 0.4);
+    animation-duration: 12s;
+  }
+
+  .particle:nth-child(3n) {
+    background: hsl(var(--tertiary) / 0.5);
+    animation-duration: 8s;
+  }
+
+  @keyframes particle-float {
+    0% {
+      transform: translateY(100vh) translateX(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) translateX(100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Stagger Animation Utility */
+  .stagger-animation > * {
+    opacity: 0;
+    animation: stagger-fade-in 0.8s ease-out forwards;
+  }
+
+  .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes stagger-fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px hsl(var(--primary) / 0.2);
+  }
+
+  /* Loading Animation */
+  .loading-dots {
+    display: inline-block;
+  }
+
+  .loading-dots::after {
+    content: '...';
+    animation: loading-dots 1.5s infinite;
+  }
+
+  @keyframes loading-dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+  }
+}
