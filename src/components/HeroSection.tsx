@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, Linkedin, Twitter, Mail, Download, Sparkles } from 'lucide-react';
-import heroPortrait from '@/assets/hero-portrait.jpg';
+import { ArrowDown, Github, Linkedin, Twitter, Mail, Download } from 'lucide-react';
+import heroPortrait from '@/assets/image.png';
 import { ParticleBackground } from './ParticleBackground';
 
 export const HeroSection = () => {
@@ -63,7 +63,6 @@ export const HeroSection = () => {
         <div className="space-y-8 animate-fade-in-up">
           <div className="space-y-6">
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-primary animate-pulse" />
               <span className="text-primary font-semibold tracking-wide">WELCOME TO MY WORLD</span>
             </div>
             
@@ -89,9 +88,7 @@ export const HeroSection = () => {
           </div>
 
           <p className="text-lg text-muted-foreground max-w-lg leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-            Passionate about designing software that solve real-world problems. 
-            Enthusiastic, hardworking individual with a love for creating 
-            innovative solutions through code.
+            IT graduate with internship experience in AI-powered applications, NLP pipelines, and LLM integrations using Python and Flask. Skilled in building scalable backend systems, REST APIs, and AI-driven automation workflows.
           </p>
 
           <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>
@@ -108,9 +105,15 @@ export const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="glass-card border-primary/30 hover:border-primary/60 hover-lift group"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Ajaishanth_Resume.pdf';
+                link.download = 'Ajaishanth_Resume.pdf';
+                link.click();
+              }}
             >
               <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Download CV
+              Download Resume
             </Button>
           </div>
 
@@ -139,11 +142,11 @@ export const HeroSection = () => {
         {/* Profile Image */}
         <div className="flex justify-center lg:justify-end animate-scale-in">
           <div className="relative group">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden gradient-border p-1 hover-lift">
+            <div className="w-80 lg:w-96 rounded-3xl overflow-hidden gradient-border p-1 hover-lift">
               <img 
                 src={heroPortrait} 
                 alt="Ajaishanth S G - Full Stack Developer"
-                className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-auto rounded-2xl transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             

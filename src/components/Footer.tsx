@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Instagram, Heart } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 export const Footer = () => {
   const socialLinks = [
@@ -64,8 +64,8 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>Marthandam, Nagarcoil</p>
-              <p>ajaishanth.dev@gmail.com</p>
+              <p>Marthandam, Kanyakumari</p>
+              <p>ajaishanth22@gmail.com</p>
               <p>Available for freelance work</p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-card-border/20 pt-8 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            (c) {currentYear} Made with <Heart className="h-4 w-4 text-red-500" /> by Ajaishanth S G
+            &copy; {currentYear} Ajaishanth S G. All rights reserved.
           </p>
         </div>
       </div>

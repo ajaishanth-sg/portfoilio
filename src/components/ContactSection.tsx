@@ -10,20 +10,20 @@ export const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'ajaishanth.dev@gmail.com',
-      href: 'mailto:ajaishanth.dev@gmail.com'
+      value: 'ajaishanth22@gmail.com',
+      href: 'mailto:ajaishanth22@gmail.com'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Marthandam, Nagarcoil',
+      value: 'Marthandam, Kanyakumari',
       href: '#'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 9876543210',
-      href: 'tel:+919876543210'
+      value: '+91 7448926450',
+      href: 'tel:+917448926450'
     }
   ];
 

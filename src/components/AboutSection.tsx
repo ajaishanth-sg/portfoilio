@@ -4,27 +4,27 @@ export const AboutSection = () => {
   const skills = [
     {
       icon: Code2,
-      title: 'Frontend Development',
-      description: 'Building responsive and interactive user interfaces with modern frameworks',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js']
+      title: 'Languages & Core',
+      description: 'Solid foundation in programming languages and core web technologies.',
+      technologies: ['Python', 'JavaScript ES6+', 'SQL', 'Java', 'HTML5', 'CSS3']
     },
     {
       icon: Database,
-      title: 'Backend Development',
-      description: 'Creating robust server-side applications and APIs',
-      technologies: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL']
+      title: 'Frameworks & Tools',
+      description: 'Building robust backend systems and managing development workflows.',
+      technologies: ['Flask', 'REST APIs', 'Git', 'Docker', 'React']
     },
     {
       icon: Globe,
-      title: 'Full Stack Solutions',
-      description: 'End-to-end application development from concept to deployment',
-      technologies: ['REST APIs', 'GraphQL', 'Docker', 'AWS']
+      title: 'AI & Machine Learning',
+      description: 'Developing intelligent applications with ML, NLP, and LLMs.',
+      technologies: ['TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'RAG']
     },
     {
       icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Cross-platform mobile applications with modern tools',
-      technologies: ['React Native', 'Flutter', 'Expo', 'Firebase']
+      title: 'Integrations & Enterprise',
+      description: 'Connecting systems and building scalable enterprise workflows.',
+      technologies: ['ServiceNow', 'Salesforce', 'Gmail API', 'Vector DBs']
     }
   ];
 
@@ -42,9 +42,9 @@ export const AboutSection = () => {
             About <span className="text-gradient">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm Ajaishanth S G, a passionate self-taught programmer from Marthandam, Nagarcoil. 
-            I love creating innovative solutions and turning ideas into reality through code. 
-            My journey in tech is driven by curiosity and the desire to solve real-world problems.
+            I'm Ajaishanth S G, an IT graduate with a passion for applied AI, backend engineering, and real-world software development. 
+            With hands-on experience in building AI-powered applications, NLP pipelines, and LLM integrations, I am dedicated to creating scalable backend systems and enterprise AI solutions. 
+            My technical foundation spans across Python, Flask, REST APIs, and building reliable intelligence platforms.
           </p>
         </div>
 
@@ -85,12 +85,11 @@ export const AboutSection = () => {
         {/* Enhanced Stats Section */}
         <div className="mt-20 relative">
           <div className="glass-card p-8 rounded-3xl border border-primary/20">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
-                { number: '20+', label: 'Projects Completed', color: 'text-primary' },
-                { number: '2+', label: 'Years Experience', color: 'text-secondary' },
+                { number: '5+', label: 'Certifications', color: 'text-primary' },
                 { number: '10+', label: 'Technologies', color: 'text-tertiary' },
-                { number: '100%', label: 'Client Satisfaction', color: 'text-primary-glow' }
+                { number: '3+', label: 'Enterprise Projects', color: 'text-primary-glow' }
               ].map((stat, index) => (
                 <div 
                   key={index}

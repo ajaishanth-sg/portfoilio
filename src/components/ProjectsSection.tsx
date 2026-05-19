@@ -5,62 +5,35 @@ import { Github, ExternalLink, Calendar } from 'lucide-react';
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Maxmoffy',
-      description: 'A modern web application built with cutting-edge technologies for enhanced user experience.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/ajaishanth-sg/maxmoffy',
+      title: 'Pharma AI (MetricsNumero)',
+      description: 'AI-powered pharmaceutical applications focused on quality assurance, compliance, and document intelligence workflows. Features OCR for batch record compliance.',
+      technologies: ['Python', 'Flask', 'React', 'NLP', 'Computer Vision'],
+      githubUrl: 'https://github.com/ajaishanth-sg',
       liveUrl: '#',
-      lastUpdated: 'Aug 17, 2025',
+      lastUpdated: 'Recent',
+      category: 'AI/ML'
+    },
+    {
+      title: 'GenCanvas — AI Diagram Studio',
+      description: 'AI-powered Enterprise Architecture diagramming tool generating multi-tiered architecture diagrams from prompts and documents with export support.',
+      technologies: ['React', 'FastAPI', 'Tailwind CSS', 'Zustand'],
+      githubUrl: 'https://github.com/ajaishanth-sg',
+      liveUrl: '#',
+      lastUpdated: 'Recent',
       category: 'Web Application'
     },
     {
-      title: 'Blood Bank Management System',
-      description: 'Comprehensive management system for blood banks with donor tracking and inventory management.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'Bootstrap'],
-      githubUrl: 'https://github.com/ajaishanth-sg/Blood-Bank-Management-',
+      title: 'Kogniv — Knowledge Platform',
+      description: 'Enterprise AI platform integrating ServiceNow, Salesforce, and Gmail for unified knowledge retrieval and RAG-based search workflows.',
+      technologies: ['Python', 'LLMs', 'RAG', 'Vector DB', 'Docker'],
+      githubUrl: 'https://github.com/ajaishanth-sg',
       liveUrl: '#',
-      lastUpdated: 'Aug 3, 2025',
-      category: 'Healthcare'
-    },
-    {
-      title: 'Mehendi Geni',
-      description: 'AI-powered application for mehendi design generation and customization.',
-      technologies: ['Python', 'TensorFlow', 'Flask', 'React'],
-      githubUrl: 'https://github.com/ajaishanth-sg/mehendi_geni',
-      liveUrl: '#',
-      lastUpdated: 'May 25, 2025',
-      category: 'AI/ML'
-    },
-    {
-      title: 'Mehendi Chatbot',
-      description: 'Intelligent chatbot for mehendi-related queries and design recommendations.',
-      technologies: ['Python', 'NLP', 'Flask', 'JavaScript'],
-      githubUrl: 'https://github.com/ajaishanth-sg/mehendi-chatbot',
-      liveUrl: '#',
-      lastUpdated: 'Apr 29, 2025',
-      category: 'AI/ML'
-    },
-    {
-      title: 'Data Science Projects',
-      description: 'Collection of data science experiments and analysis projects using Jupyter notebooks.',
-      technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
-      githubUrl: 'https://github.com/ajaishanth-sg/datascience',
-      liveUrl: '#',
-      lastUpdated: 'Ongoing',
-      category: 'Data Science'
-    },
-    {
-      title: 'Personal Portfolio',
-      description: 'Modern, responsive portfolio website showcasing my work and skills.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      githubUrl: 'https://github.com/ajaishanth-sg/Ajaishanth',
-      liveUrl: '#',
-      lastUpdated: 'Aug 17, 2025',
-      category: 'Portfolio'
+      lastUpdated: 'Recent',
+      category: 'Enterprise AI'
     }
   ];
 
-  const categories = ['All', 'Web Application', 'Healthcare', 'AI/ML', 'Data Science', 'Portfolio'];
+  const categories = ['All', 'AI/ML', 'Web Application', 'Enterprise AI'];
 
   return (
     <section id="projects" className="py-20 relative">
